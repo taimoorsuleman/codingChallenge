@@ -12,6 +12,7 @@ protocol PlayerDelegate{
 }
 
 final class PlayerViewModel :PlayerDelegate {
+    
     private var url:String
     // MARK: - Init
     init(url: String) {
