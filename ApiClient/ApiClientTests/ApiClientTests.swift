@@ -1,14 +1,14 @@
 //
-//  CodingExerciseTests.swift
-//  CodingExerciseTests
+//  ApiClientTests.swift
+//  ApiClientTests
 //
-//  Created by Taimoor Suleman on 11/11/2023.
+//  Created by Taimoor Suleman on 17/11/2023.
 //
 
 import XCTest
-@testable import CodingExercise
+@testable import ApiClient
 
-final class CodingExerciseTests: XCTestCase {
+final class ApiClientTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
