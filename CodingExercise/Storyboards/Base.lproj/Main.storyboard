@@ -30,13 +30,15 @@
                             <constraint firstItem="0Mu-pR-2ye" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rDJ-EJ-k4q"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Uk1-vH-UYw"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="0Mu-pR-2ye" id="LWw-2d-1un"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="4"/>
+            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
         </scene>
         <!--Drop Down View Controller-->
         <scene sceneID="O1d-um-Wik">
@@ -122,10 +124,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2FG-Bw-Ale" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="4"/>
+            <point key="canvasLocation" x="1950.3816793893129" y="3.5211267605633805"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="NqO-Zz-R1A">
+            <objects>
+                <viewController storyboardIdentifier="PlayerViewController" id="lVd-oG-SL2" customClass="PlayerViewController" customModule="CodingExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rMW-Fn-UrI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKe-NM-zKm">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAu-V1-dis">
+                                <rect key="frame" x="146.66666666666666" y="451" width="100" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-ew-G3R">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="ReG-Lz-7WH"/>
+                                            <constraint firstAttribute="height" constant="50" id="VYZ-JE-ZaC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="playButtonAction:" destination="lVd-oG-SL2" eventType="touchUpInside" id="Yy4-6K-G5g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSD-3v-Lff">
+                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="91Y-xv-6uR"/>
+                                            <constraint firstAttribute="width" constant="50" id="pNv-nV-6WA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="pause.fill" catalog="system">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pauseButtonAction:" destination="lVd-oG-SL2" eventType="touchUpInside" id="lbe-aa-xau"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oM9-r6-Fze">
+                                <rect key="frame" x="18" y="768" width="357" height="31"/>
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0dA-a2-wou"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qAu-V1-dis" firstAttribute="centerX" secondItem="DKe-NM-zKm" secondAttribute="centerX" id="9fm-Kd-gBV"/>
+                            <constraint firstItem="oM9-r6-Fze" firstAttribute="leading" secondItem="0dA-a2-wou" secondAttribute="leading" constant="20" id="C2E-5Z-STA"/>
+                            <constraint firstItem="DKe-NM-zKm" firstAttribute="top" secondItem="0dA-a2-wou" secondAttribute="top" id="RCV-Ip-oR5"/>
+                            <constraint firstItem="qAu-V1-dis" firstAttribute="centerY" secondItem="rMW-Fn-UrI" secondAttribute="centerY" constant="50" id="b0R-VL-Rwf"/>
+                            <constraint firstItem="0dA-a2-wou" firstAttribute="trailing" secondItem="oM9-r6-Fze" secondAttribute="trailing" constant="20" id="gUb-j4-IM0"/>
+                            <constraint firstItem="0dA-a2-wou" firstAttribute="bottom" secondItem="oM9-r6-Fze" secondAttribute="bottom" constant="20" id="hRj-jO-Mnf"/>
+                            <constraint firstItem="0dA-a2-wou" firstAttribute="trailing" secondItem="DKe-NM-zKm" secondAttribute="trailing" id="nN4-dm-Dbq"/>
+                            <constraint firstItem="DKe-NM-zKm" firstAttribute="leading" secondItem="0dA-a2-wou" secondAttribute="leading" id="qRT-AG-phD"/>
+                            <constraint firstItem="DKe-NM-zKm" firstAttribute="bottom" secondItem="0dA-a2-wou" secondAttribute="bottom" id="z9v-rK-C79"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="hSD-3v-Lff" id="sp4-dB-6w7"/>
+                        <outlet property="playButton" destination="bgo-ew-G3R" id="sJp-m6-K4e"/>
+                        <outlet property="silder" destination="oM9-r6-Fze" id="OeY-97-U19"/>
+                        <outlet property="videoView" destination="DKe-NM-zKm" id="9Zm-EE-XJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmQ-J8-wqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2823.6641221374043" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pause.fill" catalog="system" width="117" height="128"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
     </resources>
 </document>

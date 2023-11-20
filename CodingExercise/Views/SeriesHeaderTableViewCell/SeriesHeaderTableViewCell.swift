@@ -8,7 +8,9 @@
 import UIKit
 
 protocol SeriesHeaderTableViewCellDelegate : AnyObject{
-    func onReadMoretap()
+    func didTapReadMorebtn()
+    func didTapPlayBtn()
+    func didTapTrailerBtn()
 }
 
 class SeriesHeaderTableViewCell: UITableViewCell {
@@ -68,6 +70,14 @@ class SeriesHeaderTableViewCell: UITableViewCell {
     
     @IBAction func showLessBtnTapped(_ sender: UIButton) {
         showLessBtn.tag == 0 ? (showLessBtn.tag = 1) : (showLessBtn.tag = 0)
-        delegate?.onReadMoretap()
+        delegate?.didTapReadMorebtn()
+    }
+    
+    
+    @IBAction func playBtnTapped(_ sender: UIButton) {
+        delegate?.didTapPlayBtn()
+    }
+    @IBAction func trailerBtnTapped(_ sender: UIButton) {
+        delegate?.didTapTrailerBtn()
     }
 }

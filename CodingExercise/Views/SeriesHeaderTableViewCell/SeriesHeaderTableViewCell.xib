@@ -88,6 +88,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hC8-h2-Ivw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwl-en-zcC">
                                 <rect key="frame" x="270.66666666666669" y="0.0" width="254.33333333333331" height="55"/>
@@ -101,6 +104,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="trailerBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5by-Lp-9H4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

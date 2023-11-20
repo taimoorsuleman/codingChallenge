@@ -20,6 +20,9 @@
 		486146BB2B0A117300497094 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486146BA2B0A117300497094 /* MockAPIService.swift */; };
 		486146BE2B0A132E00497094 /* SereisViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486146BD2B0A132E00497094 /* SereisViewModelTests.swift */; };
 		486146C12B0A163200497094 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 486146C02B0A163200497094 /* SDWebImage */; };
+		486146C72B0B9D1E00497094 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486146C62B0B9D1E00497094 /* PlayerViewController.swift */; };
+		486146CB2B0BA22000497094 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486146CA2B0BA22000497094 /* PlayerViewModel.swift */; };
+		486146CD2B0BA22B00497094 /* PlayerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486146CC2B0BA22B00497094 /* PlayerBuilder.swift */; };
 		48DD86082AFFDD75001F1FF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD86072AFFDD75001F1FF4 /* AppDelegate.swift */; };
 		48DD860F2AFFDD75001F1FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48DD860D2AFFDD75001F1FF4 /* Main.storyboard */; };
 		48DD86112AFFDD7F001F1FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DD86102AFFDD7F001F1FF4 /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		486146B42B08DDD600497094 /* DropDownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownModel.swift; sourceTree = "<group>"; };
 		486146BA2B0A117300497094 /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 		486146BD2B0A132E00497094 /* SereisViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SereisViewModelTests.swift; sourceTree = "<group>"; };
+		486146C62B0B9D1E00497094 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		486146CA2B0BA22000497094 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		486146CC2B0BA22B00497094 /* PlayerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBuilder.swift; sourceTree = "<group>"; };
 		48DD86042AFFDD75001F1FF4 /* CodingExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DD86072AFFDD75001F1FF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48DD860E2AFFDD75001F1FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,8 +143,8 @@
 			children = (
 				486146B42B08DDD600497094 /* DropDownModel.swift */,
 				486146642B07C96A00497094 /* DropDownTableViewCell.swift */,
-				486146622B07C48900497094 /* DropDownViewController.swift */,
 				486146B02B087F7F00497094 /* DropDownViewModel.swift */,
+				486146622B07C48900497094 /* DropDownViewController.swift */,
 			);
 			path = DropDown;
 			sourceTree = "<group>";
@@ -164,6 +170,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		486146C52B0B9D0500497094 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				486146CC2B0BA22B00497094 /* PlayerBuilder.swift */,
+				486146CA2B0BA22000497094 /* PlayerViewModel.swift */,
+				486146C62B0B9D1E00497094 /* PlayerViewController.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		48DD85FB2AFFDD75001F1FF4 = {
@@ -276,6 +292,7 @@
 		48DD863E2AFFF61A001F1FF4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				486146C52B0B9D0500497094 /* Player */,
 				486146612B07C46800497094 /* DropDown */,
 				48DD863F2AFFF675001F1FF4 /* Series */,
 			);
@@ -419,12 +436,15 @@
 				48DD86502AFFF8CA001F1FF4 /* String + Ext.swift in Sources */,
 				486146B12B087F7F00497094 /* DropDownViewModel.swift in Sources */,
 				484EBF412B00FDF5005EE4C1 /* SeasonModel.swift in Sources */,
+				486146C72B0B9D1E00497094 /* PlayerViewController.swift in Sources */,
 				48DD86412AFFF7AA001F1FF4 /* SeriesViewController.swift in Sources */,
 				486146B52B08DDD600497094 /* DropDownModel.swift in Sources */,
 				4861465A2B07A69300497094 /* SeriesHeaderTableViewCell.swift in Sources */,
 				48DD86522AFFF8CA001F1FF4 /* UIViewController + Ext.swift in Sources */,
 				486146B32B08825A00497094 /* Utils.swift in Sources */,
+				486146CB2B0BA22000497094 /* PlayerViewModel.swift in Sources */,
 				486146652B07C96A00497094 /* DropDownTableViewCell.swift in Sources */,
+				486146CD2B0BA22B00497094 /* PlayerBuilder.swift in Sources */,
 				48DD86082AFFDD75001F1FF4 /* AppDelegate.swift in Sources */,
 				48DD86512AFFF8CA001F1FF4 /* UIView + Ext.swift in Sources */,
 				48DD86492AFFF85F001F1FF4 /* SeriesModel.swift in Sources */,

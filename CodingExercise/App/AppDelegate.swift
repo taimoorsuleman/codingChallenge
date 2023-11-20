@@ -24,8 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ///  Setup Initial Screen
     private func setupInitialViewController() {
         let seriesVC = SeriesBuilder.build()
+        let navVC = UINavigationController(rootViewController: seriesVC)
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = seriesVC
+        self.window?.rootViewController = navVC
         self.window?.makeKeyAndVisible()
     }
 }

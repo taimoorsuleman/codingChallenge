@@ -24,16 +24,6 @@ final class SereisViewModelTests: XCTestCase {
         mockService = nil
         sut = nil
     }
-
-    
-    func test_viewmodelInitilize_sectionTitleGetCorrectValue(){
-        //given
-    
-        //when
-//        let title = sut.
-        //then
-        XCTAssertEqual("", "")
-    }
     
     
     func test_seriesApiCall_failure_responseShouldBeNil() async{

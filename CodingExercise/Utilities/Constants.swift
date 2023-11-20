@@ -28,6 +28,7 @@ struct StoryboardIdentifiers{
 struct ViewControllerIdentifiers{
     static let seriesVCIdentifier : String = .seriesVCIdentifier
     static let dropDownVCIdentifier : String = .dropdownVCIdentifier
+    static let playerVCIdentifier : String = .playerVCIdentifier
 
 }
 
@@ -54,6 +55,7 @@ extension String{
     //Identifiers
     static let seriesVCIdentifier = "SeriesViewController"
     static let dropdownVCIdentifier = "DropDownViewController"
+    static let playerVCIdentifier = "PlayerViewController"
 
     static let seasonNameCollectionViewCell = "SeasonNameCollectionViewCell"
     static let episodeTableViewCell = "EpisodeTableViewCell"

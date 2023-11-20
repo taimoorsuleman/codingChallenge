@@ -24,8 +24,9 @@ class SeriesViewController: UIViewController {
         performRequests()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     
@@ -121,11 +122,21 @@ extension SeriesViewController {
     }
 }
 
-
+//MARK: - SeriesHeaderTableViewCellDelegate
 extension SeriesViewController : SeriesHeaderTableViewCellDelegate{
-    func onReadMoretap() {
-        self.tableView.reloadData()
+    
+    func didTapPlayBtn() {
+        let videoURL = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+        let playerVC = PlayerBuilder.build(videoURL: videoURL)
+        self.navigationController?.pushViewController(playerVC, animated: true)
     }
     
+    func didTapTrailerBtn() {
+        debugPrint("Trailer Button Tapped")
+    }
+    
+    func didTapReadMorebtn() {
+        self.tableView.reloadData()
+    }
     
 }
